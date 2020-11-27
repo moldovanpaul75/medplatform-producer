@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Bean;
 public class MessagingRabbitmqApplication {
 
     static final String topicExchangeName = "spring-boot-exchange";
-
     static final String queueName = "spring-boot";
+    static final String ROUTING_KEY = "myNameIsJeff";
 
     @Bean
     Queue queue() {
@@ -28,7 +28,7 @@ public class MessagingRabbitmqApplication {
 
     @Bean
     Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("myNameIsJeff");
+        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
     }
 
     public static void main(String[] args) throws InterruptedException {
