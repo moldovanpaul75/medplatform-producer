@@ -1,3 +1,3 @@
-# DS2020_30641_Moldovan_Paul_Assignment_2
+# medplatfrom
 
-Assignment 2 producer application
+Medical Platform Project CloudAMQP Producer
